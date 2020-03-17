@@ -5,6 +5,23 @@ body {
     background-color: #1E232C;
 }
 
+.upload-button {
+  background: rgb(0,112,182);
+  background: linear-gradient(90deg, rgba(0,112,182,1) 0%, rgba(28,44,94,1) 100%);
+  border: none;
+  color: white;
+  padding: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+  text-decoration: none;
+  
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 10px;
+}
+
 h1 {
   
   font-size: 60px;

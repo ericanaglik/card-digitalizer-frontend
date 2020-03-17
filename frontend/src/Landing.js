@@ -17,11 +17,12 @@ function Landing(props) {
           taking a picture of your cards
         </p>
       </div>
+      <button class="upload-button">Start Uploading</button>
       </div>
 
-      <div class="button">
-        <button class="upload-button">Start Uploading</button>
-      </div>
+      
+        
+
 
       <div class="landing-left">
         <img src={landingLeft} alt="" />
