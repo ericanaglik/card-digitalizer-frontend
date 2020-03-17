@@ -7,15 +7,16 @@ body {
 
 .landing-left img{
   position: absolute;
-  width: 400px;
+  width: 25%;
   left: 0px;
   top: 80px;
   margin-left: -20px;
 }
 
 .landing-right img{
-    position: absolute;
-    width: 900px;
+  position: absolute;
+  width: 61%;
+
 	right: 0px;
 	top: 80px;
 	margin-left: -20px;
