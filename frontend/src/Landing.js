@@ -6,6 +6,22 @@ import landingLeft from "./landing-left.png";
 function Landing(props) {
   return (
     <div>
+      <div class="landing-text">
+      <div class="maintext">
+        <h1>Track your card</h1>
+        <h1>collection online</h1>
+      </div>
+      <div class="subtext">
+        <p>Find out how much your collection is worth,
+          easily sort your cards on your terms, all from
+          taking a picture of your cards
+        </p>
+      </div>
+      </div>
+
+      <div class="button">
+        <button class="upload-button">Start Uploading</button>
+      </div>
 
       <div class="landing-left">
         <img src={landingLeft} alt="" />

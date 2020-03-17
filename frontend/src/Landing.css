@@ -5,6 +5,26 @@ body {
     background-color: #1E232C;
 }
 
+h1 {
+  
+  font-size: 60px;
+
+  line-height: 25px;
+}
+
+.subtext {
+  width: 420px;
+  line-height: 25px;
+  font-size: 18px;
+
+}
+.landing-text {
+  color: white;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 300px;
+}
+
 .landing-left img{
   position: absolute;
   width: 25%;
