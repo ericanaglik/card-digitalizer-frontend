@@ -39,7 +39,7 @@ h1 {
   color: white;
   text-align: left;
   padding-left: 10%;
-  padding-top: 300px;
+  padding-top: 12%;
 }
 
 .landing-left img{
@@ -52,7 +52,8 @@ h1 {
 
 .landing-right img{
   position: absolute;
-  width: 61%;
+  width: auto;
+  height: 91%;
 
 	right: 0px;
 	top: 80px;
