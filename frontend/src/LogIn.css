@@ -1,0 +1,97 @@
+
+#login{
+  padding-top: 20px;
+  position: absolute;
+  width: 300px;
+  left: calc(50% - 150px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  padding-bottom: 20px;
+}
+/* #login .card .card-title h2{
+  position:relative;
+  font-size:1.2rem;
+  letter-spacing:.5px;
+  font-weight:bold;
+  margin-bottom:20px;
+} */
+.col{
+  background:#fff;
+  padding:20px 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: 20px solid;
+  border-image: linear-gradient(to right, red, orange);
+}
+
+.form{
+  background:#fff;
+  padding:20px 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+  
+.c-input {  	
+    width: 100%;
+    
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #12739E;
+    border-radius: 4px;
+
+  }
+  
+.c-button {
+    width: 100%;
+    padding-left: 140px;
+    padding-right: 140px;
+    font-size: 15px;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #12739E;    
+    cursor: pointer;  
+    
+  }
+
+  a:link {
+    text-decoration: none;
+    color: #000;
+    padding-top: 25px;
+    padding-left: 25px;
+    text-align: center;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: rgb(85, 85, 85);
+    text-align: center;
+  }
+  
+  a:active {
+    text-decoration: underline;
+    text-align: center;
+  }
+
+
+
+.switchpage {
+padding: 2rem 1.2rem 0;
+margin-bottom: 0;
+text-align: center;
+  
+}
