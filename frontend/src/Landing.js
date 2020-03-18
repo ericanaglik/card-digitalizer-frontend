@@ -20,10 +20,6 @@ function Landing(props) {
       <button class="upload-button">Start Uploading</button>
       </div>
 
-      
-        
-
-
       <div class="landing-left">
         <img src={landingLeft} alt="" />
       </div>
