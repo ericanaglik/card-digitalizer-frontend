@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import landingRight from "./landing-right.png";
+import landingLeft from "./landing-left.png";
 import "./LogIn.css";
 import { Link } from "react-router-dom";
 const Input = props => (
@@ -20,7 +22,7 @@ class LogIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: { value: "" },
+      username: { value: "" },
       password: { value: "" }
     };
   }
@@ -37,62 +39,62 @@ class LogIn extends Component {
   render() {
     return (
       <div>
-        <section id="login">
-          <div className="container ">
-            <div className="row">
-              <div className="col-md-10 mx-auto">
-                <div className="card">
-                  <div className="row mr-0 ml-0 d-flex h-100">
-
-
-                    <div className="col">
-                      <div className="card-title">
-
+        <div className='page-wrap'> 
+        <div className='mobile'>
                         <h2>Log In</h2>
-                        <p>
-                          Welcome Back! Hope you're having a great day at Make
-                          School!
-                        </p>
-                      </div>
-                      <div className="card-body">
+                        <img
+                      src="https://www.shorecakesupply.com/wp-content/uploads/2016/10/poke-3.png"
+                      className="pokeball"
+                      width="50px"
+                    />
+
                         <form className="form">
                           <Input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Make School Email"
-                            value={this.state.email.value}
-                            onKeyUp={e => this.handleInput("email", e)}
+                            type="username"
+                            id="username"
+                            name="username"
+                            placeholder="Username"
+                            value={this.state.username.value}
+                            onKeyUp={e => this.handleInput("username", e)}
                           />
                           <Input
                             type="password"
                             id="password"
                             name="password"
-                            placeholder="Create password"
+                            placeholder="Password"
                             value={this.state.password.value}
                             onKeyUp={e => this.handleInput("password", e)}
                           />
                           <div class="loginbutton">
                             <Button text="Log In" onClick={this.handleSubmit} />
                           </div>
-                          
-                          
                         </form>
                         <div class="switchpage">
                             <Link to="/signup" className="navbar__link">
                               Need to sign up? Click here
                             </Link>
                             </div>
+
+                        <div class="switchpage">
+                            <Link to="/signup" className="navbar__link">
+                              Forgot password?
+                            </Link>
+                            </div>
                       </div>
+                  </div>
+
+                                <div class="landing-left">
+                      <img src={landingLeft} alt="" />
+                    </div>
+                    
+                    <div class="landing-right">
+                      <img src={landingRight} alt="" />
                     </div>
                   </div>
-                </div>{" "}
-                {/* End of card */}
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+
+
+
+
     );
   }
 }
