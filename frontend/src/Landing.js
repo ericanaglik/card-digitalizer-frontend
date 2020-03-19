@@ -2,6 +2,7 @@ import React from "react";
 import "./Landing.css";
 import landingRight from "./landing-right.png";
 import landingLeft from "./landing-left.png";
+import { Link } from "react-router-dom";
 
 function Landing(props) {
   return (
@@ -17,7 +18,9 @@ function Landing(props) {
           taking a picture of your cards
         </p>
       </div>
+      <Link to="/signup">
       <button class="upload-button">Start Uploading</button>
+      </Link>
       </div>
 
       <div class="landing-left">

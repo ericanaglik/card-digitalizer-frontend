@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import landingRight from "./landing-right.png";
 import landingLeft from "./landing-left.png";
-import "./LogIn.css";
+import "./SignUp.css";
 import { Link } from "react-router-dom";
 const Input = props => (
   <input
@@ -18,10 +18,12 @@ const Button = props => (
   </button>
 );
 
-class LogIn extends Component {
+class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      email: { value: "" },
+      fullName: { value: "" },
       username: { value: "" },
       password: { value: "" }
     };
@@ -40,8 +42,8 @@ class LogIn extends Component {
     return (
       <div>
         <div className='page-wrap'> 
-        <div className='login'>
-                        <h2>Log In</h2>
+        <div className='signup'>
+                        <h2>Sign Up</h2>
                         <img
                       src="https://www.shorecakesupply.com/wp-content/uploads/2016/10/poke-3.png"
                       className="pokeball"
@@ -49,6 +51,22 @@ class LogIn extends Component {
                     />
 
                         <form className="form">
+                        <Input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            value={this.state.email.value}
+                            onKeyUp={e => this.handleInput("email", e)}
+                          />
+                          <Input
+                            type="fullName"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Full Name"
+                            value={this.state.fullName.value}
+                            onKeyUp={e => this.handleInput("fullName", e)}
+                          />
                           <Input
                             type="username"
                             id="username"
@@ -66,12 +84,12 @@ class LogIn extends Component {
                             onKeyUp={e => this.handleInput("password", e)}
                           />
                           <div class="loginbutton">
-                            <Button text="Log In" onClick={this.handleSubmit} />
+                            <Button text="Sign Up" onClick={this.handleSubmit} />
                           </div>
                         </form>
                         <div class="switchpage">
-                            <Link to="/signup" className="navbar__link">
-                              Need to sign up? Click here
+                            <Link to="/login" className="navbar__link">
+                              Need to log in? Click here
                             </Link>
                             </div>
 
@@ -99,4 +117,4 @@ class LogIn extends Component {
   }
 }
 
-export default LogIn;
+export default SignUp;
