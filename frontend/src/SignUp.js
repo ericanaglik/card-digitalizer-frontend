@@ -36,7 +36,7 @@ class SignUp extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    axios.post('http://127.0.0.1:8000/api/signup/', this.state, {
+    axios.post('https://card-digitalizer.appspot.com/api/signup/', this.state, {
       withCredentials: true
     })
     .then((response) => {

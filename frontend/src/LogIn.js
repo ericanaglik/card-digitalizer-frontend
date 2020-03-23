@@ -31,11 +31,11 @@ class LogIn extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    axios.post('http://127.0.0.1:8000/api/login/', {
+    axios.post('https://card-digitalizer.appspot.com/api/login/', {
       'username': this.state.username,
       'password': this.state.password
     }, {
-      withCredentials: true
+      withCredentials: true,
     })
     .then((response) => {
       console.log(response);
