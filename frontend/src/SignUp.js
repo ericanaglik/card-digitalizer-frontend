@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import landingRight from "./landing-right.png";
 import landingLeft from "./landing-left.png";
 import "./SignUp.css";
-import { Link } from "react-router-dom";
+import SubmitCard from "./SubmitCard.js"
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 import axios from "axios";
 
@@ -40,7 +41,14 @@ class SignUp extends Component {
     })
     .then((response) => {
       if (response.status === 201) {
-	    console.log("created!")
+
+        return (
+          <BrowserRouter>
+          <Route path="/submit" exact component={SubmitCard} />
+          </BrowserRouter>
+        )
+        
+        
       }
     }, (error) => {
       console.log(error);
