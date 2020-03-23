@@ -3,6 +3,9 @@ import landingRight from "./landing-right.png";
 import landingLeft from "./landing-left.png";
 import "./SignUp.css";
 import { Link } from "react-router-dom";
+
+import axios from "axios";
+
 const Input = props => (
   <input
     className="c-input"
@@ -35,6 +38,26 @@ class SignUp extends Component {
     if (param === "name") {
     }
   };
+
+  handleSubmit(e) {
+    e.preventDefault()
+    alert(`Username: ${this.state.username} Password: ${this.state.password}`)
+    axios.post('http://127.0.0.1:8000/api/signup/', {
+      'username': this.state.username,
+      'password': this.state.password,
+      'email': this.state.email,
+      'full name': this.state.fullName,
+    }, {
+      withCredentials: true
+    })
+    .then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
+    });
+  }
+
+
 
   render() {
     return (
