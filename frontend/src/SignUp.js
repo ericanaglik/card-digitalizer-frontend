@@ -42,12 +42,8 @@ class SignUp extends Component {
       withCredentials: true
     })
     .then((response) => {
-      if (response.status === 201) {
-
-          return (<Redirect to="/submit" />);
-
-      }
-    }, (error) => {
+      this.props.history.push('/submit/')
+      }, (error) => {
       console.log(error);
       console.log("Try again buddy")
     });
