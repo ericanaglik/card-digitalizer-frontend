@@ -25,8 +25,8 @@ class LogIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: { value: "" },
-      password: { value: "" }
+      username: "",
+      password: ""
     };
   }
 
@@ -36,10 +36,12 @@ class LogIn extends Component {
     }
   };
 
-  handleSubmit() {
+  handleSubmit(e) {
+    console.log(this.state)
+    e.preventDefault()
     axios.post('http://127.0.0.1:8000/api/login/', {
-      'username': 'erica',
-      'password': 'baby2605'
+      'username': this.state.username,
+      'password': this.state.password
     }, {
       withCredentials: true
     })
@@ -64,32 +66,32 @@ class LogIn extends Component {
 
                         <form className="form">
                           <Input
+	    		    value={this.state.username}
                             type="username"
                             id="username"
                             name="username"
                             placeholder="Username"
-                            value={this.state.username.value}
-                            onKeyUp={e => this.handleInput("username", e)}
+			    onChange = {(username) => this.setState({username})}
                           />
                           <Input
+	    		    value={this.state.password}
                             type="password"
                             id="password"
                             name="password"
                             placeholder="Password"
-                            value={this.state.password.value}
-                            onKeyUp={e => this.handleInput("password", e)}
+			    onChange = {(password) => this.setState({password})}
                           />
-                          <div class="loginbutton">
-                            <Button text="Log In" onClick={this.handleSubmit()} />
+                          <div className="loginbutton">
+                            <Button type="submit" text="Log In" onClick={(e) => this.handleSubmit(e)}/>
                           </div>
                         </form>
-                        <div class="switchpage">
+                        <div className="switchpage">
                             <Link to="/signup" className="navbar__link">
                               Need to sign up? Click here
                             </Link>
                             </div>
 
-                        <div class="switchpage">
+                        <div className="switchpage">
                             <Link to="/signup" className="navbar__link">
                               Forgot password?
                             </Link>
@@ -97,11 +99,11 @@ class LogIn extends Component {
                       </div>
                   </div>
 
-                                <div class="landing-left">
+                                <div className="landing-left">
                       <img src={landingLeft} alt="" />
                     </div>
                     
-                    <div class="landing-right">
+                    <div className="landing-right">
                       <img src={landingRight} alt="" />
                     </div>
                   </div>
