@@ -17,6 +17,7 @@ function App() {
       <Route path="/login" exact component={LogIn} />
       <Route path="/signup" exact component={SignUp} />
       <Route path="/submit" exact component={SubmitCard} />
+      
       </BrowserRouter>
     </div>
   );

@@ -3,7 +3,7 @@ import landingRight from "./landing-right.png";
 import landingLeft from "./landing-left.png";
 import "./SignUp.css";
 import SubmitCard from "./SubmitCard.js"
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Link, Redirect } from 'react-router-dom'
 
 import axios from "axios";
 
@@ -24,6 +24,8 @@ class SignUp extends Component {
       password: "",
     };
 
+    this.loggedIn = false
+
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
@@ -42,13 +44,8 @@ class SignUp extends Component {
     .then((response) => {
       if (response.status === 201) {
 
-        return (
-          <BrowserRouter>
-          <Route path="/submit" exact component={SubmitCard} />
-          </BrowserRouter>
-        )
-        
-        
+          return (<Redirect to="/submit" />);
+
       }
     }, (error) => {
       console.log(error);
@@ -128,6 +125,8 @@ class SignUp extends Component {
                     <div class="landing-right">
                       <img src={landingRight} alt="" />
                     </div>
+                    
+                    
                   </div>
 
 
