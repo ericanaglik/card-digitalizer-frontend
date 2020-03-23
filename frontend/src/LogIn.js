@@ -108,3 +108,10 @@ class LogIn extends Component {
 }
 
 export default LogIn;
+
+
+
+
+
+axios.get("url/card_list")
+.then() // [{}]

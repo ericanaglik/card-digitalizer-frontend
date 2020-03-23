@@ -39,9 +39,12 @@ class SignUp extends Component {
       withCredentials: true
     })
     .then((response) => {
-      console.log(response);
+      if (response.status === 201) {
+	    console.log("created!")
+      }
     }, (error) => {
       console.log(error);
+      console.log("Try again buddy")
     });
   }
 
