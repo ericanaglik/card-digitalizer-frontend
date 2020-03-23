@@ -22,14 +22,16 @@ class SignUp extends Component {
       username: "",
       password: "",
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleInput = (param, e) => {
-    console.log(param);
-
-    if (param === "name") {
-    }
-  };
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
 
   handleSubmit(e) {
     e.preventDefault()
@@ -64,7 +66,7 @@ class SignUp extends Component {
                             name="email"
                             placeholder="Email"
                             value={this.state.email.value}
-                            onKeyUp={e => this.handleInput("email", e)}
+	    		    onChange={this.handleChange}
                           />
                           <input className="c-input"
                             type="fullName"
@@ -72,7 +74,7 @@ class SignUp extends Component {
                             name="fullName"
                             placeholder="Full Name"
                             value={this.state.fullName.value}
-                            onKeyUp={e => this.handleInput("fullName", e)}
+	    		    onChange={this.handleChange}
                           />
                           <input className="c-input"
                             type="username"
@@ -80,7 +82,7 @@ class SignUp extends Component {
                             name="username"
                             placeholder="Username"
                             value={this.state.username.value}
-                            onKeyUp={e => this.handleInput("username", e)}
+	    		    onChange={this.handleChange}
                           />
                           <input className="c-input"
                             type="password"
@@ -88,7 +90,7 @@ class SignUp extends Component {
                             name="password"
                             placeholder="Password"
                             value={this.state.password.value}
-                            onKeyUp={e => this.handleInput("password", e)}
+	    		    onChange={this.handleChange}
                           />
                           <div class="loginbutton">
                             <Button text="Sign Up" onClick={this.handleSubmit} />
