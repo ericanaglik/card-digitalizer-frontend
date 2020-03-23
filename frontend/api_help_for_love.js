@@ -47,8 +47,4 @@ const pokemon = require('pokemontcgsdk')
  *     display(card.imageUrl)
  *   })
  * })
- *
-
-
-
-
+ */

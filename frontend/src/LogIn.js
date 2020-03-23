@@ -3,6 +3,9 @@ import landingRight from "./landing-right.png";
 import landingLeft from "./landing-left.png";
 import "./LogIn.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+
 const Input = props => (
   <input
     className="c-input"
@@ -28,13 +31,24 @@ class LogIn extends Component {
   }
 
   handleInput = (param, e) => {
-    let value = e.target.value;
-
-    console.log(param);
 
     if (param === "name") {
     }
   };
+
+  handleSubmit() {
+    axios.post('http://127.0.0.1:8000/api/login/', {
+      'username': 'erica',
+      'password': 'baby2605'
+    }, {
+      withCredentials: true
+    })
+    .then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
+    });
+  }
 
   render() {
     return (
@@ -42,7 +56,7 @@ class LogIn extends Component {
         <div className='page-wrap'> 
         <div className='login'>
                         <h2>Log In</h2>
-                        <img
+                        <img alt=""
                       src="https://www.shorecakesupply.com/wp-content/uploads/2016/10/poke-3.png"
                       className="pokeball"
                       width="50px"
@@ -66,7 +80,7 @@ class LogIn extends Component {
                             onKeyUp={e => this.handleInput("password", e)}
                           />
                           <div class="loginbutton">
-                            <Button text="Log In" onClick={this.handleSubmit} />
+                            <Button text="Log In" onClick={this.handleSubmit()} />
                           </div>
                         </form>
                         <div class="switchpage">

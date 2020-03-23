@@ -30,8 +30,6 @@ class SignUp extends Component {
   }
 
   handleInput = (param, e) => {
-    let value = e.target.value;
-
     console.log(param);
 
     if (param === "name") {
@@ -44,7 +42,7 @@ class SignUp extends Component {
         <div className='page-wrap'> 
         <div className='signup'>
                         <h2>Sign Up</h2>
-                        <img
+                        <img alt=''
                       src="https://www.shorecakesupply.com/wp-content/uploads/2016/10/poke-3.png"
                       className="pokeball"
                       width="50px"
