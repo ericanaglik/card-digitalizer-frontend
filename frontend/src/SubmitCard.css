@@ -58,8 +58,9 @@ html, body, .app {
   }
 }
 
-.form {
+.form-submit-card {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .c-input {  	
@@ -102,17 +103,29 @@ html, body, .app {
 .landing-right img{
   position: absolute;
   width: auto;
-  height: 95%;
+  height: 91%;
 
 	right: 0px;
 	top: 80px;
 	margin-left: -20px;
 }
 
-.navbar__link {
-  color: white;
-  
+.types {
+  color: black;
+  width: 100%;
+	margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid transparent;
+	border-radius: 4px;
 }
+.stages {
+  color: black;
+	margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid transparent;
+	border-radius: 4px;
+}
+
 .switchpage {
   padding-top: 20px;
 }
