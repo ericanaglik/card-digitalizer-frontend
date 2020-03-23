@@ -6,15 +6,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 
-const Input = props => (
-  <input
-    className="c-input"
-    type={props.type}
-    placeholder={props.placeholder}
-    onKeyUp={props.onKeyUp}
-  />
-);
-
 const Button = props => (
   <button className="c-button" onClick={props.onClick}>
     {props.text}
@@ -29,22 +20,17 @@ class LogIn extends Component {
       password: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.setUsername = this.setUsername.bind(this)
-    this.setPassword = this.setPassword.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-   setUsername(username) {
-    console.log(username)
-    this.setState({username: username})
-  }
-  
-  setPassword(password) {
-    this.setState({password: password})
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    alert(`Username: ${this.state.username} Password: ${this.state.password}`)
     axios.post('http://127.0.0.1:8000/api/login/', {
       'username': this.state.username,
       'password': this.state.password
@@ -71,18 +57,21 @@ class LogIn extends Component {
                     />
 
                         <form className="form" onSubmit={this.handleSubmit}>
-                          <Input
+                          <input className="c-input"
                             type="username"
-                            id="username"
+	    		    value={this.state.username}
+	                    id="username"
                             name="username"
                             placeholder="Username"
-			    onChange={this.setUsername}
+			    onChange={this.handleChange}
                           />
-                          <Input
+                          <input className="c-input"
                             type="password"
+	    		    value={this.state.password}
                             id="password"
                             name="password"
                             placeholder="Password"
+	    		    onChange={this.handleChange}
                           />
                           <div className="loginbutton">
                             <Button type="submit" text="Log In" />

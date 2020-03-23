@@ -6,14 +6,6 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 
-const Input = props => (
-  <input
-    className="c-input"
-    type={props.type}
-    placeholder={props.placeholder}
-    onKeyUp={props.onKeyUp}
-  />
-);
 
 const Button = props => (
   <button className="c-button" onClick={props.onClick}>
@@ -25,10 +17,10 @@ class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: { value: "" },
-      fullName: { value: "" },
-      username: { value: "" },
-      password: { value: "" }
+      email: "",
+      fullName: "",
+      username: "",
+      password: "",
     };
   }
 
@@ -41,13 +33,7 @@ class SignUp extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    alert(`Username: ${this.state.username} Password: ${this.state.password}`)
-    axios.post('http://127.0.0.1:8000/api/signup/', {
-      'username': this.state.username,
-      'password': this.state.password,
-      'email': this.state.email,
-      'full name': this.state.fullName,
-    }, {
+    axios.post('http://127.0.0.1:8000/api/signup/', this.state, {
       withCredentials: true
     })
     .then((response) => {
@@ -72,7 +58,7 @@ class SignUp extends Component {
                     />
 
                         <form className="form">
-                        <Input
+                        <input className="c-input"
                             type="email"
                             id="email"
                             name="email"
@@ -80,7 +66,7 @@ class SignUp extends Component {
                             value={this.state.email.value}
                             onKeyUp={e => this.handleInput("email", e)}
                           />
-                          <Input
+                          <input className="c-input"
                             type="fullName"
                             id="fullName"
                             name="fullName"
@@ -88,7 +74,7 @@ class SignUp extends Component {
                             value={this.state.fullName.value}
                             onKeyUp={e => this.handleInput("fullName", e)}
                           />
-                          <Input
+                          <input className="c-input"
                             type="username"
                             id="username"
                             name="username"
@@ -96,7 +82,7 @@ class SignUp extends Component {
                             value={this.state.username.value}
                             onKeyUp={e => this.handleInput("username", e)}
                           />
-                          <Input
+                          <input className="c-input"
                             type="password"
                             id="password"
                             name="password"
