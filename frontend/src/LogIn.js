@@ -27,18 +27,24 @@ class LogIn extends Component {
     this.state = {
       username: "",
       password: ""
-    };
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.setUsername = this.setUsername.bind(this)
+    this.setPassword = this.setPassword.bind(this)
   }
 
-  handleInput = (param, e) => {
-
-    if (param === "name") {
-    }
-  };
+   setUsername(username) {
+    console.log(username)
+    this.setState({username: username})
+  }
+  
+  setPassword(password) {
+    this.setState({password: password})
+  }
 
   handleSubmit(e) {
-    console.log(this.state)
     e.preventDefault()
+    alert(`Username: ${this.state.username} Password: ${this.state.password}`)
     axios.post('http://127.0.0.1:8000/api/login/', {
       'username': this.state.username,
       'password': this.state.password
@@ -64,25 +70,22 @@ class LogIn extends Component {
                       width="50px"
                     />
 
-                        <form className="form">
+                        <form className="form" onSubmit={this.handleSubmit}>
                           <Input
-	    		    value={this.state.username}
                             type="username"
                             id="username"
                             name="username"
                             placeholder="Username"
-			    onChange = {(username) => this.setState({username})}
+			    onChange={this.setUsername}
                           />
                           <Input
-	    		    value={this.state.password}
                             type="password"
                             id="password"
                             name="password"
                             placeholder="Password"
-			    onChange = {(password) => this.setState({password})}
                           />
                           <div className="loginbutton">
-                            <Button type="submit" text="Log In" onClick={(e) => this.handleSubmit(e)}/>
+                            <Button type="submit" text="Log In" />
                           </div>
                         </form>
                         <div className="switchpage">
