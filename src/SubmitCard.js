@@ -85,6 +85,7 @@ class SubmitCard extends Component {
           this.props.history.push('/dashboard/')
         }, (error) => {
           console.log(error);
+          this.props.history.push('/dashboard/')
         })
       }
     })
