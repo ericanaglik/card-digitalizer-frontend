@@ -129,3 +129,13 @@ html, body, .app {
 .switchpage {
   padding-top: 20px;
 }
+
+
+.pleasework {
+  position: absolute;
+  margin-left: 500px;
+  margin-right: 0px;
+  right: 0px;
+	top: 150px;
+}
+

@@ -161,11 +161,19 @@ class SubmitCard extends Component {
               <div class="loginbutton">
                 <Button text="Submit" onClick={this.handleSubmit} />
               </div>
+              
             </form>
+            
 
           </div>
+          
         </div>
-        {this.state.cards.map(card => <Card card={card} onClick={this.handleSelectCard} />)}
+
+        <div className="pleasework">
+          {this.state.cards.map(card => <Card card={card} onClick={this.handleSelectCard}/>)}
+          </div>
+
+        
       </div>
     );
   }
