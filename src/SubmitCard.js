@@ -3,6 +3,8 @@ import "./SubmitCard.css";
 import typeOptions from "./Types"
 import stageOptions from "./Stages"
 
+import axios from "axios"
+
 import Select from "react-select"
 
 const pokemon = require('pokemontcgsdk')
@@ -14,7 +16,12 @@ const Button = props => (
 );
 
 const Card = props => (
-  <img src={props.card.imageUrl} alt="" />
+  <img 
+  src={props.card.imageUrl} 
+  alt="" 
+  id={props.card.id}
+  onClick={props.onClick}
+  />
 )
 
 
@@ -31,6 +38,7 @@ class SubmitCard extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleSelectChange = this.handleSelectChange.bind(this)
+    this.handleSelectCard = this.handleSelectCard.bind(this)
   }
 
   handleSelectChange(selected, e) {
@@ -58,11 +66,26 @@ class SubmitCard extends Component {
   
   handleSelectCard(e) {
     e.preventDefault()
-
+    const {name, hp, types, subtype} = this.state
+    this.state.cards.forEach( card => {
+      if (card.id === e.target.id) {
+        axios.post("127.0.0.1:5000/api/card/create/", {
+          user: null, 
+          name, 
+          hp, 
+          type_1: types, 
+          type_2: null,
+          stage: subtype,
+          series: null
+        })
+        .then((response) => {
+          this.props.history.push('/dashboard/')
+        }, (error) => {
+          console.log(error);
+        })
+      }
+    })
   }
-
-
-    // axios.post("127.0.0.1:5000/api/card/create/")
 
   render() {
     return (
@@ -130,7 +153,7 @@ class SubmitCard extends Component {
 
           </div>
         </div>
-        {this.state.cards.map(card => <Card card={card} />)}
+        {this.state.cards.map(card => <Card card={card} onClick={this.handleSelectCard} />)}
       </div>
     );
   }
