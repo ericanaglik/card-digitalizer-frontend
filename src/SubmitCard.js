@@ -26,6 +26,14 @@ const Card = props => (
 
 
 class SubmitCard extends Component {
+
+  componentDidMount() {
+    document.body.style.overflow = "visible"
+  }
+
+  componentWillUnmount(){
+    document.body.style.overflow = "hidden"
+  }
   constructor(props) {
     super(props);
     this.state = {
