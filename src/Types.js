@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
 
-const options = [
+const typeOptions = [
   { value: 'Colorless', label: 'Colorless' },
   { value: 'Darkness', label: 'Darkness' },
   { value: 'Dragon', label: 'Dragon' },
@@ -16,9 +16,9 @@ const options = [
 ]
 
 const Types = () => (
-  <Select options={options}
+  <Select options={typeOptions}
   placeholder="Select Type"
   />
 )
 
-export default Types
+export default typeOptions
