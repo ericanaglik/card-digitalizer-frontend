@@ -30,7 +30,7 @@ class Dashboard extends Component {
 								<div className="cardphoto">
 										<img src={data.img_url}/>
                     <div>
-                    <h2>{data.name}</h2>
+                    <h2 className="title">{data.name}</h2>
 													<li className="cardinfo">{data.stage}</li>
 													<li className="cardinfo">{data.type_1}</li>
                           <li className="cardinfo">{data.type_2}</li>
