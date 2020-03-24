@@ -1,0 +1,23 @@
+.cardinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: white;
+  text-decoration: underline;
+}
+
+.cardphoto {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.please {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

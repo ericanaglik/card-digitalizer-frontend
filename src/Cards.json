@@ -1,0 +1,48 @@
+{
+  "CardData" : [
+  {
+      "card_id": 20405,
+      "name": "Pikachu",
+      "stage": "Stage 1",
+      "type_1": "Lightning",
+      "type_2": "null",
+      "series": "XY",
+      "rarity": "Common",
+      "year_released": 2018,
+      "img_url": "https://images.pokemontcg.io/xy1/42.png"
+  },
+  {
+      "card_id": 20405,
+      "name": "Pikachu",
+      "stage": "Stage 1",
+      "type_1": "Lightning",
+      "type_2": "null",
+      "series": "XY",
+      "rarity": "Common",
+      "year_released": 2018,
+      "img_url": "https://images.pokemontcg.io/pop6/9.png"
+  },
+  {
+      "card_id": 20405,
+      "name": "Pikachu",
+      "stage": "Stage 1",
+      "type_1": "Lightning",
+      "type_2": "null",
+      "series": "XY",
+      "rarity": "Common",
+      "year_released": 2018,
+      "img_url": "https://images.pokemontcg.io/basep/1.png"
+  },
+  {
+      "card_id": 20405,
+      "name": "Pikachu",
+      "stage": "Stage 1",
+      "type_1": "Lightning",
+      "type_2": "null",
+      "series": "XY",
+      "rarity": "Common",
+      "year_released": 2018,
+      "img_url": "https://images.pokemontcg.io/basep/25.png"
+  }
+]
+}

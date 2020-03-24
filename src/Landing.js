@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Landing(props) {
   return (
-    <div>
+    <div className="landing">
       <div class="landing-text">
       <div class="maintext">
         <h1>Track your card</h1>
