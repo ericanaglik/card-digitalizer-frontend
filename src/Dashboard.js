@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import cards from "./Cards";
+import { Link } from "react-router-dom";
 import "./Dashboard.css"
 
 class Dashboard extends Component {
@@ -12,10 +13,19 @@ class Dashboard extends Component {
   }
 	render() {
 		return (
-            <div className="please" >
+      <div>
+      <div className="upload-card">
+            <Link to="/submit">
+      <button class="upload">Upload New Card</button>
+      </Link>
+            </div>
+            <div className="please">
+            
+            
                 {
 					cards.CardData.map((data, i) => {
 						return (
+              
 							<div key={i}>
 								<div className="cardphoto">
 										<img src={data.img_url}/>
@@ -33,6 +43,7 @@ class Dashboard extends Component {
 						);
 					})
 				}
+            </div>
             </div>
         );
     }
