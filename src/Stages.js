@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
 
-const options = [
+const stageOptions = [
   { value: 'Basic', label: 'Basic' },
   { value: 'Stage 1', label: 'Stage 1' },
   { value: 'Stage 2', label: 'Stage 2' },
@@ -11,9 +11,9 @@ const options = [
 ]
 
 const Stages = () => (
-  <Select options={options}
+  <Select options={stageOptions}
   placeholder="Select Stage"
   />
 )
 
-export default Stages
+export default stageOptions
