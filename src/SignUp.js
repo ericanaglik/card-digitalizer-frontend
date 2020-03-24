@@ -41,12 +41,12 @@ class SignUp extends Component {
     axios.post('https://card-digitalizer.appspot.com/api/signup/', this.state, {
       withCredentials: true
     })
-    .then((response) => {
-      this.props.history.push('/submit/')
+      .then((response) => {
+        this.props.history.push('/submit/')
       }, (error) => {
-      console.log(error);
-      console.log("Try again buddy")
-    });
+        console.log(error);
+        console.log("Try again buddy")
+      });
   }
 
 
@@ -55,79 +55,78 @@ class SignUp extends Component {
     return (
       <div>
         <div className='page-wrap'> 
-        <div className='signup'>
-                        <h2>Sign Up</h2>
-                        <img alt=''
-                      src="https://www.shorecakesupply.com/wp-content/uploads/2016/10/poke-3.png"
-                      className="pokeball"
-                      width="50px"
-                    />
+          <div className='signup'>
+            <h2>Sign Up</h2>
+            <img alt=''
+            src="https://www.shorecakesupply.com/wp-content/uploads/2016/10/poke-3.png"
+            className="pokeball"
+            width="50px"
+            />
 
-                        <form className="form">
-                        <input className="c-input"
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Email"
-                            value={this.state.email.value}
-	    		    onChange={this.handleChange}
-                          />
-                          <input className="c-input"
-                            type="fullName"
-                            id="fullName"
-                            name="fullName"
-                            placeholder="Full Name"
-                            value={this.state.fullName.value}
-	    		    onChange={this.handleChange}
-                          />
-                          <input className="c-input"
-                            type="username"
-                            id="username"
-                            name="username"
-                            placeholder="Username"
-                            value={this.state.username.value}
-	    		    onChange={this.handleChange}
-                          />
-                          <input className="c-input"
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Password"
-                            value={this.state.password.value}
-	    		    onChange={this.handleChange}
-                          />
-                          <div class="loginbutton">
-                            <Button text="Sign Up" onClick={this.handleSubmit} />
-                          </div>
-                        </form>
-                        <div class="switchpage">
-                            <Link to="/login" className="navbar__link">
-                              Need to log in? Click here
-                            </Link>
-                            </div>
+            <form className="form">
+              <input className="c-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              value={this.state.email.value}
+              onChange={this.handleChange}
+              />
 
-                        <div class="switchpage">
-                            <Link to="/signup" className="navbar__link">
-                              Forgot password?
-                            </Link>
-                            </div>
-                      </div>
-                  </div>
+              <input className="c-input"
+              type="fullName"
+              id="fullName"
+              name="fullName"
+              placeholder="Full Name"
+              value={this.state.fullName.value}
+              onChange={this.handleChange}
+              />
 
-                                <div class="landing-left">
-                      <img src={landingLeft} alt="" />
-                    </div>
-                    
-                    <div class="landing-right">
-                      <img src={landingRight} alt="" />
-                    </div>
-                    
-                    
-                  </div>
+              <input className="c-input"
+              type="username"
+              id="username"
+              name="username"
+              placeholder="Username"
+              value={this.state.username.value}
+              onChange={this.handleChange}
+              />
 
+              <input className="c-input"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              value={this.state.password.value}
+              onChange={this.handleChange}
+              />
 
+              <div class="loginbutton">
+                <Button text="Sign Up" onClick={this.handleSubmit} />
+              </div>
+            </form>
+            <div class="switchpage">
+              <Link to="/login" className="navbar__link">
+                Need to log in? Click here
+              </Link>
+            </div>
 
+            <div class="switchpage">
+              <Link to="/signup" className="navbar__link">
+                Forgot password?
+              </Link>
+            </div>
+          </div>
+        </div>
 
+        <div class="landing-left">
+          <img src={landingLeft} alt="" />
+        </div>
+
+        <div class="landing-right">
+          <img src={landingRight} alt="" />
+        </div>
+
+      </div>
     );
   }
 }
