@@ -11,14 +11,14 @@ function App() {
   return (
     <div className="App">
     <BrowserRouter>
-      
-      <NavBar/>
-      <Route path="/" exact component={Landing} />
-      <Route path="/login" exact component={LogIn} />
-      <Route path="/signup" exact component={SignUp} />
-      <Route path="/submit" exact component={SubmitCard} />
-      
-      </BrowserRouter>
+
+    <NavBar/>
+    <Route path="/" exact component={Landing} />
+    <Route path="/login" exact component={LogIn} />
+    <Route path="/signup" exact component={SignUp} />
+    <Route path="/submit" exact component={SubmitCard} />
+
+    </BrowserRouter>
     </div>
   );
 }

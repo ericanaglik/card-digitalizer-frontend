@@ -6,21 +6,19 @@ import { Link } from "react-router-dom";
 const NavBar = props => {
   return (
     <div>
-      
-        <ul>
-          <div>
+      <ul>
+        <div>
           <Link to="/">
-          <img src={logo} alt=""/>
+            <img src={logo} alt=""/>
           </Link>
-          </div>
-          <div>
+        </div>
+        <div>
           <li>About</li>
           <li>FAQ</li>
           <Link to="/login">
-          <li className="login-button">Log in</li>
+            <li className="login-button">Log in</li>
           </Link>
-          </div>
-
+        </div>
       </ul>
     </div>
   );

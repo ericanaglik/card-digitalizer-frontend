@@ -37,68 +37,70 @@ class LogIn extends Component {
     }, {
       withCredentials: true,
     })
-    .then((response) => {
-      this.props.history.push('/submit/')
-    }, (error) => {
-      console.log(error);
-    });
+      .then((response) => {
+        this.props.history.push('/submit/')
+      }, (error) => {
+        console.log(error);
+      });
   }
 
   render() {
     return (
       <div>
-        <div className='page-wrap'> 
-        <div className='login'>
-                        <h2>Log In</h2>
-                        <img alt=""
-                      src="https://www.shorecakesupply.com/wp-content/uploads/2016/10/poke-3.png"
-                      className="pokeball"
-                      width="50px"
-                    />
+       <div className='page-wrap'> 
+         <div className='login'>
+           <h2>Log In</h2>
+         <img alt=""
+         src="https://www.shorecakesupply.com/wp-content/uploads/2016/10/poke-3.png"
+         className="pokeball"
+         width="50px"
+         />
 
-                        <form className="form" onSubmit={this.handleSubmit}>
-                          <input className="c-input"
-                            type="username"
-	    		    value={this.state.username}
-	                    id="username"
-                            name="username"
-                            placeholder="Username"
-			    onChange={this.handleChange}
-                          />
-                          <input className="c-input"
-                            type="password"
-	    		    value={this.state.password}
-                            id="password"
-                            name="password"
-                            placeholder="Password"
-	    		    onChange={this.handleChange}
-                          />
-                          <div className="loginbutton">
-                            <Button type="submit" text="Log In" />
-                          </div>
-                        </form>
-                        <div className="switchpage">
-                            <Link to="/signup" className="navbar__link">
-                              Need to sign up? Click here
-                            </Link>
-                            </div>
+          <form className="form" onSubmit={this.handleSubmit}>
+            <input className="c-input"
+            type="username"
+            value={this.state.username}
+            id="username"
+            name="username"
+            placeholder="Username"
+            onChange={this.handleChange}
+            />
 
-                        <div className="switchpage">
-                            <Link to="/signup" className="navbar__link">
-                              Forgot password?
-                            </Link>
-                            </div>
-                      </div>
-                  </div>
+            <input className="c-input"
+            type="password"
+            value={this.state.password}
+            id="password"
+            name="password"
+            placeholder="Password"
+            onChange={this.handleChange}
+            />
+      
+            <div className="loginbutton">
+             <Button type="submit" text="Log In" />
+            </div>
+          </form>
+          <div className="switchpage">
+            <Link to="/signup" className="navbar__link">
+              Need to sign up? Click here
+            </Link>
+          </div>
 
-                                <div className="landing-left">
-                      <img src={landingLeft} alt="" />
-                    </div>
-                    
-                    <div className="landing-right">
-                      <img src={landingRight} alt="" />
-                    </div>
-                  </div>
+          <div className="switchpage">
+            <Link to="/signup" className="navbar__link">
+              Forgot password?
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="landing-left">
+        <img src={landingLeft} alt="" />
+      </div>
+
+      <div className="landing-right">
+        <img src={landingRight} alt="" />
+      </div>
+    </div>
 
 
 
@@ -108,10 +110,3 @@ class LogIn extends Component {
 }
 
 export default LogIn;
-
-
-
-
-
-axios.get("url/card_list")
-.then() // [{}]
