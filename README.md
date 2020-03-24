@@ -1,83 +1,68 @@
-# Seniors Spring Intensive Deliverable Proposal 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Dates 3/16-3/25
+## Available Scripts
 
-**My Name:**
-Erica Naglik
+In the project directory, you can run:
 
-**Project Name:** 
-Card Digitalizer
+### `yarn start`
 
-**Is your project New or Old?**
-New
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Is your project Solo or Team?**
-Team
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Description
+### `yarn test`
 
-**Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
-I am completely starting from scratch for this intensive. Card digitalizer is going to be a project that allows users to upload their playing cards (pokemon, magic the gathering, etc) and find the values of their collections by matching photographs to a database of card prices. In this intensive I will make the frontend for my teammates matching backend. I am going to use react and code frontend for authentication, as well as write code to sort people's cards by type, price etc. 
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Objective 1: Connect backend to frontend
-Connect to the django api from react so I can update the model from a frontend form and get the data I need to display the webpages
+### `yarn build`
 
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-**Why do you want to meet this objective? How will it improve your project?** 
-It allows me to render real, live database data instead of hardcoding data.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-**How will you demonstrate completion of your objective?** 
-I will be able to add a test card to the form and be able to see it on the list page
+### `yarn eject`
 
-## Objective 2: Create 4 web pages
-1. Login
-2. Signup
-3. Card List 
-4. Card add form
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-**Why do you want to meet this objective? How will it improve your project?** 
-I want to meet this objective because these are the main pages that need to exist so that people can view my project. This is also my "skateboard".
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-**How will you demonstrate completion of your objective?** 
-I will demonstate completion through my github commits and having a live link of my pages
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Objective 3: Allow the user to sort and filter the data 
-**Why do you want to meet this objective? How will it improve your project?** 
-It will make the website more dynamic and add a lot of functionality
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-**How will you demonstrate completion of your objective?** 
-You will be able to click buttons and interact with my website
+## Learn More
 
-## Stretch goals (optional):
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-**What stretch goals do you have for your project?**
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Evaluation
+### Code Splitting
 
-**You must meet the following criteria in order to pass the intensive:**
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-- Students must get proposal approved before starting the project to pass
-- SOLO
-    - Must score an average above a 3 on the [rubric]
-- TEAM
-    - Must score an average above 3 on the [rubric]
-    - Each individual completes 2 of the 3 objectives from their proposal
-- Pitch your product
+### Analyzing the Bundle Size
 
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-[rubric]:https://docs.google.com/document/d/1IOQDmohLBEBT-hyr-2vgw1mbZUNsq3fHxVfH0oRmVt0/edit
+### Making a Progressive Web App
 
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
+### Advanced Configuration
 
-## Approval Checklist
-- [x] If I have a team project, I wrote this proposal to represent my work and only my work
-- [x] I have completed all the necessary parts of this proposal
-- [x] I linked my proposal in the Spring Intensive Tracker
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Sign off
+### Deployment
 
-**Student Name:**                
-> Erica Naglik / 03/16/20
-**Make School Advisor Name**
-> TBD
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
