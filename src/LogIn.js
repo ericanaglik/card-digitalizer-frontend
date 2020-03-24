@@ -38,7 +38,7 @@ class LogIn extends Component {
       withCredentials: true,
     })
       .then((response) => {
-        this.props.history.push('/submit/')
+        this.props.history.push('/dashboard/')
       }, (error) => {
         console.log(error);
       });

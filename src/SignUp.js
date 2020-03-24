@@ -42,7 +42,7 @@ class SignUp extends Component {
       withCredentials: true
     })
       .then((response) => {
-        this.props.history.push('/submit/')
+        this.props.history.push('/dashboard/')
       }, (error) => {
         console.log(error);
         console.log("Try again buddy")

@@ -66,17 +66,20 @@ class SubmitCard extends Component {
   
   handleSelectCard(e) {
     e.preventDefault()
-    const {name, hp, types, subtype} = this.state
     this.state.cards.forEach( card => {
+      console.log(card.id)
+      console.log(e.target.id)
       if (card.id === e.target.id) {
-        axios.post("127.0.0.1:5000/api/card/create/", {
+        console.log("made it in")
+        axios.post("https://card-digitalizer.appspot.com/api/card/create", {
           user: null, 
-          name, 
-          hp, 
-          type_1: types, 
-          type_2: null,
-          stage: subtype,
-          series: null
+          name: this.state.name, 
+          hp: this.state.hp, 
+          type_1: this.state.types, 
+          type_2: "",
+          stage: this.state.subtype,
+          series: "XY",
+          image_url: card.imageUrl
         })
         .then((response) => {
           this.props.history.push('/dashboard/')
