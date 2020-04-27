@@ -78,7 +78,6 @@ class SubmitCard extends Component {
       console.log(card.id)
       console.log(e.target.id)
       if (card.id === e.target.id) {
-        console.log("made it in")
         axios.post("https://card-digitalizer.appspot.com/api/card/create", {
           user: null, 
           name: this.state.name, 
