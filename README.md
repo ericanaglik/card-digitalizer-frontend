@@ -1,3 +1,4 @@
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/40673456/96789369-e65a2400-13a9-11eb-9053-6ecf06f7baab.gif)
 ## Card Stash
 Written for a hackathon
 
